@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  border: none;
+}
+
+.books-page {
+  margin-top: 30px;
+}
+
+.books-page__heading {
+  font-size: 4rem;
+  /* color: #ee2b69; */
+  color: var(--clr-main);
+}
+
+.book-page__filter {
+  color: #555;
+
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.filter-heading {
+  font-size: 1.6rem;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.filter-btn {
+  /* background-color: #ee2b69; */
+  background-color: var(--clr-main);
+  padding: 1rem 1.5rem;
+  border-radius: 9999px;
+  color: #fdfdfd;
+  font-weight: bold;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* all books sections */
+
+/* class="mt-10 flex  gap-10 justify-start flex-wrap" */
+
+.book-page__allbooks {
+  margin-top: 3rem;
+  display: flex;
+  gap: 5rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  padding: 2rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 40rem;
+  /* border: solid #ee2b69 0.4rem; */
+  border: solid var(--clr-main) 0.4rem;
+  width: 30rem;
+  border-radius: 2.5rem;
+}
+
+.image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookImage {
+  max-height: 20rem;
+}
+
+.book-info {
+  padding: 2rem;
+}
+
+.bookTitle {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: bold;
+}
+
+.bookAuthor {
+  font-size: 1.6rem;
+  margin-top: 0.4rem;
+}
+
+.m-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn--3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn--3 {
+  margin-top: 2rem;
+  text-align: center;
+  /* background-color: #ee2b69; */
+  background-color: var(--clr-main);
+
+  /* padding: 0.8rem 2rem; */
+  padding: 1.4rem 1.4rem;
+
+  color: #fff;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 6.4rem;
+}

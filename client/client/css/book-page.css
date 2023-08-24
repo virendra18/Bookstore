@@ -1,0 +1,41 @@
+.section-book-page {
+  padding: 9.6rem 0;
+}
+
+.content-area {
+  display: flex;
+  gap: 10rem;
+}
+
+.book-page_img {
+  height: 28rem;
+}
+
+.content-area_text {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content-area-bookname {
+  font-size: 4.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--clr-main);
+}
+
+.content-area-bookdescription {
+  font-size: 2rem;
+  color: #010101a1;
+}
+
+.btn--book {
+  background-color: var(--clr-logo);
+  color: white;
+}
+
+.btn-checkout {
+  width: 17rem;
+}

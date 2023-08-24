@@ -1,0 +1,73 @@
+.hero-section {
+  margin-top: 9.6rem;
+  /* padding: 0 4rem; */
+}
+.s-card1,
+.s-card2,
+.s-card3 {
+  background-color: var(--clr-light-4);
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 4rem 4rem;
+}
+
+.main-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rem;
+}
+
+.s-text {
+  font-size: 8rem;
+  /* color: white; */
+  color: white;
+}
+
+.s-img1,
+.s-img2,
+.s-img3 {
+  height: 30rem;
+  /* border: 2px solid blue; */
+}
+
+.s-img1 {
+  transform: translateX(16rem);
+}
+
+.s-img2 {
+  transform: translateX(8rem);
+}
+/* .s-img3{
+    transform: translateX(-16rem);
+} */
+
+.fArrow,
+.bArrow {
+  font-size: 4rem;
+  /* border: 2px solid red;
+    background-color: orange; */
+
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn--card {
+  background-color: white;
+ 
+  color: var(--clr-logo);
+}
+
+.s-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+}

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  border: none;
+}
+
+.search-page{
+    padding: 3rem 0;
+}
+
+.search-page__heading {
+  font-size: 4rem;
+  /* color: #ee2b69; */
+  color: var(--clr-main);
+}
+
+
+.notFoundPara{
+    margin-top: 5rem;
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+
+#search-result{
+    margin-top: 4rem;
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>History Books</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/book.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <script
+      src="https://kit.fontawesome.com/18bf41005e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
+    <script type="module" src="../js/searchForm.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html">
+        <!-- <img src="../images/main-logo.png" alt="Bookstore logo" class="logo" /> -->
+        <h1 class="main-logo">Page Turners</h1>
+      </a>
+      <nav class="main_nav">
+        <div class="search">
+          <form id="searchform">
+            <input
+              class="inputbar searchbar"
+              type="text"
+              required
+              placeholder="Search Book by Title"
+            />
+            <button class="search-submit" type="submit">
+              <i class="fa-solid search-icon fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        <ul class="main-nav-list">
+          <li class="header-link">
+            <a class="main-nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="header-link">
+            <a class="main-nav-link" href="../books.html">All Books</a>
+          </li>
+          <li class="header-link auth-status"></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </header>
+    <main class="books-page container">
+      <h2 class="books-page__heading">History Books</h2>
+
+      <!-- <section class="book-page__filter">
+        <h3 class="filter-heading">Filter by Categories:</h3>
+        <div class="filter-buttons">
+          <button class="filter-btn">Finance</button>
+          <button class="filter-btn">Self Help</button>
+          <button class="filter-btn">Biography</button>
+          <button class="filter-btn">History</button>
+        </div>
+      </section> -->
+
+      <section class="book-page__allbooks"></section>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+
+        <div class="modal-content">
+          <div class="modal-body"></div>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+    </main>
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              class="f-logo"
+              alt="Bookstore logo"
+              src="../images/books/footer-img-3.png"
+            />
+          </a>
+        </div>
+
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">123/20 Sector 10, Bhilai, 490020</p>
+            <p>
+              <a class="footer-link" href="tel:9889889889">+91-9889889889</a
+              ><br />
+              <a class="footer-link" href="mailto:hello@bookstore.com"
+                >hello@bookstore.com</a
+              >
+            </p>
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About Bookstore</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+            <li><a class="footer-link" href="#">Blog</a></li>
+            <li><a class="footer-link" href="#">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Policies</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Privacy</a></li>
+            <li><a class="footer-link" href="#">Terms of Use</a></li>
+            <li><a class="footer-link" href="#">Copyright Policy</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Help</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">FAQ </a></li>
+            <li><a class="footer-link" href="#">Help center</a></li>
+            <li><a class="footer-link" href="#">Report a issue</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer_links">
+        <ul class="social-links">
+          <li>
+            <a class="footer-link" href="#"
+              ><ion-icon
+                class="social-icon md hydrated"
+                name="logo-instagram"
+                role="img"
+                aria-label="logo instagram"
+              ></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a class="footer-link" href="#"
+              ><ion-icon
+                class="social-icon md hydrated"
+                name="logo-facebook"
+                role="img"
+                aria-label="logo facebook"
+              ></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a class="footer-link" href="#"
+              ><ion-icon
+                class="social-icon md hydrated"
+                name="logo-twitter"
+                role="img"
+                aria-label="logo twitter"
+              ></ion-icon
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_copyright">
+        <p class="copyright">
+          Copyright © <span class="year">2022</span> by Bookstore, Inc. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="./category.js"></script>
+    <script src="../js/header-js.js"></script>
+  </body>
+</html>

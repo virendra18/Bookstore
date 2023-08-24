@@ -1,0 +1,132 @@
+/* FORM */
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+input {
+  border: none;
+}
+
+.form {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 50px;
+}
+
+.ftitle {
+  padding-bottom: 2rem;
+
+  font-size: 4rem;
+  /* color: #ee2b69; */
+  color: var(--clr-main);
+}
+
+.ft {
+  font-size: 1.6rem;
+  font-weight: bold;
+  /* color: #777; */
+  color: var(--clr-main);
+}
+
+.fb {
+  height: 3.6rem;
+  border-radius: 1rem;
+  /* background-color: #f90c5774; */
+  background-color: var(--clr-main-2);
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.sv {
+  font-size: 1.6rem;
+}
+
+.btn-form {
+  margin-top: 3.6rem;
+
+  /* background-color: #ee2b69; */
+  background-color: var(--clr-main);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1.2rem 2.8rem;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+  /* width: 200px; */
+}
+
+.form-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* image upload css */
+
+.image-upload {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dotted;
+  border-color: rgb(209 213 219);
+  width: 100%;
+  height: 300px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  /* background-color: rgb(226 232 240); */
+  /* background-color: #f90c5774; */
+  background-color: var(--clr-main-2);
+  padding: 20px;
+}
+
+.image-container {
+  height: 400px;
+  overflow: hidden;
+}
+
+#preview-image {
+  max-height: 400px;
+}
+
+.upload-text {
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.image-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.image-input {
+  width: 0px;
+  height: 0px;
+}
+/* image upload css end */
+
+/* Placeholder  */
+::placeholder {
+  
+  color: white;
+  color: rgba(34, 34, 34, 0.682);
+  opacity: 1; /* Firefox */
+}

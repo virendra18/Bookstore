@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" class="admin-html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/book.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+
+    <script
+      src="https://kit.fontawesome.com/18bf41005e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script type="module" src="./js/authStatus.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="./index.html">
+        <!-- <img src="./images/main-logo.png" alt="Bookstore logo" class="logo" /> -->
+        <h1 class="main-logo">Page Turners</h1>
+      </a>
+      <nav class="main_nav">
+        <div class="search">
+          <form id="searchform">
+            <input
+              class="inputbar searchbar"
+              type="text"
+              required
+              placeholder="Search Book by Title"
+            />
+            <button class="search-submit" type="submit">
+              <i class="fa-solid search-icon fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        <ul class="main-nav-list">
+          <li class="header-link">
+            <a class="main-nav-link" href="#">Home</a>
+          </li>
+
+          <li class="header-link">
+            <a class="main-nav-link" href="./books.html">All Books</a>
+          </li>
+          <li class="header-link auth-status"></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </header>
+    <main class="container admin-page">
+      <div class="admin-page__heading">
+        <h2 class="admin-page__heading">Admin Page</h2>
+        <button class="btn__add">
+          <a href="./form.html">Add a Book</a>
+        </button>
+      </div>
+
+      <section id="allbooks"></section>
+
+      <div class="edit-modal hidden">
+        <div class="edit-modal-body hidden"></div>
+        <button class="edit-close-modal">&times;</button>
+        <section class="section-form">
+          <div class="container">
+            <!-- <form class="form" onsubmit="onFormSubmit()"> -->
+            <form id="addbookform" class="form">
+              <h2 class="ftitle">Update Book</h2>
+              <label class="ft" for="booktitle">Book Title</label>
+              <input
+                type="text"
+                class="fb"
+                name="name"
+                id="name"
+                placeholder="Enter the title of the book"
+                required
+              />
+
+              <label class="ft" for="bookauthor">Book Author</label>
+              <input
+                type="text"
+                class="fb"
+                name="author"
+                id="author"
+                placeholder="Enter the author of the book"
+                required
+              />
+
+              <label class="ft" for="bookpublisher">Book Publisher</label>
+              <input
+                type="text"
+                class="fb"
+                name="publication"
+                id="publication"
+                placeholder="Enter the name of book publisher"
+                required
+              />
+
+              <label class="ft" for="description">Book Description</label>
+              <input
+                type="text"
+                class="fb"
+                name="description"
+                id="description"
+                placeholder="Enter description of book "
+                required
+              />
+
+              <label class="ft" for="bookcategory">Book Category</label>
+              <select class="fb" name="category" id="category" required>
+                <option class="sv" value="Choose ">Select a category</option>
+                <option class="sv" value="finance">Finance</option>
+                <option class="sv" value="biography">Biography</option>
+                <option class="sv" value="selfhelp">Self Help</option>
+                <option class="sv" value="history">History</option>
+              </select>
+
+              <label class="ft" for="featured">Featured Book</label>
+              <select class="fb" name="featured" id="featured" required>
+                <option class="sv" value="false">No</option>
+                <option class="sv" value="true">Yes</option>
+              </select>
+
+              <!-- <h2 class="ft">Image</h2>
+  
+              <div class="image-upload">
+                <div class="image-container">
+                  <img src="" alt="" id="preview-image" />
+                </div> -->
+
+              <!-- <label>
+                  <div class="image-form-container">
+                    <p class="upload-text">Click here to upload</p>
+  
+                    <input
+                      type="file"
+                      id="uploadedimage"
+                      name="uploadedimage"
+                      id="uploadedimage"
+                      accept="image/*"
+                      class="image-input"
+                    
+                    />
+                  </div>
+                </label> -->
+              <!-- </div> -->
+
+              <div class="form-btn">
+                <button class="btn-form" type="submit">Update Book</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <!-- </div> -->
+      <div class="edit-overlay hidden"></div>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+
+        <div class="modal-content">
+          <div class="modal-body"></div>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+    </main>
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              class="f-logo"
+              alt="Bookstore logo"
+              src="./images/books/footer-img-3.png"
+            />
+          </a>
+        </div>
+
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">123/20 Sector 10, Bhilai, 490020</p>
+            <p>
+              <a class="footer-link" href="tel:9889889889">+91-9889889889</a
+              ><br />
+              <a class="footer-link" href="mailto:hello@bookstore.com"
+                >hello@bookstore.com</a
+              >
+            </p>
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About Bookstore</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+            <li><a class="footer-link" href="#">Blog</a></li>
+            <li><a class="footer-link" href="#">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Policies</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Privacy</a></li>
+            <li><a class="footer-link" href="#">Terms of Use</a></li>
+            <li><a class="footer-link" href="#">Copyright Policy</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Help</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">FAQ </a></li>
+            <li><a class="footer-link" href="#">Help center</a></li>
+            <li><a class="footer-link" href="#">Report a issue</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer_links">
+        <ul class="social-links">
+          <li>
+            <a class="footer-link" href="#"
+              ><ion-icon
+                class="social-icon md hydrated"
+                name="logo-instagram"
+                role="img"
+                aria-label="logo instagram"
+              ></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a class="footer-link" href="#"
+              ><ion-icon
+                class="social-icon md hydrated"
+                name="logo-facebook"
+                role="img"
+                aria-label="logo facebook"
+              ></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a class="footer-link" href="#"
+              ><ion-icon
+                class="social-icon md hydrated"
+                name="logo-twitter"
+                role="img"
+                aria-label="logo twitter"
+              ></ion-icon
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_copyright">
+        <p class="copyright">
+          Copyright © <span class="year">2022</span> by Bookstore, Inc. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/admin.js"></script>
+    <script type="module" src="./js/searchForm.js"></script>
+
+    <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/editBook.js"></script>
+    <script src="./js/header-js.js"></script>
+  </body>
+</html>

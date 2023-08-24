@@ -1,0 +1,133 @@
+.close-modal {
+  position: absolute;
+  top: 0rem;
+  right: 2rem;
+  font-size: 3.5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  /* position: absolute; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+
+  background-color: white;
+  padding: 4rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  /* position: absolute; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+/* modal content */
+
+.modal-body {
+  /* border: #ee2b69 */
+  /* border: solid #ee2b69 0.4rem; */
+  border: solid var(--clr-main) 0.4rem;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  min-height: 200px;
+
+  width: 80%;
+  margin: 0 auto;
+}
+
+.modal-card {
+  display: flex;
+  /* min-height: 20vh; */
+  gap: 5rem;
+  width: 100%;
+
+  align-items: center;
+}
+
+.modalbookImage {
+  height: 40vh;
+  border-radius: 0.5rem;
+}
+
+/* .modal-book-description */
+
+.modal-book-heading {
+  font-size: 2.24rem;
+  margin-bottom: 0.5rem;
+  color: #121212ef;
+}
+.modal-book-info p {
+  font-size: 1.92rem;
+}
+
+.modal-text-group {
+  display: flex;
+  /* gap: 0.5rem; */
+
+  align-items: baseline;
+  flex-direction: column;
+  color: #121212;
+}
+.modal-text {
+  display: flex;
+  gap: 1rem;
+
+  align-items: baseline;
+}
+
+.modal-text-group::after {
+  content: "";
+  display: flex;
+  border-bottom: 2px solid rgba(51, 51, 51, 0.2);
+  width: 100%;
+  margin: 0.6rem 0;
+}
+
+.modal-text-group:nth-child(4)::after {
+  display: none;
+}
+
+@media (max-width: 59em) {
+  .modal {
+    height: 100%;
+    padding: 3.6rem 0;
+    width: 100%;
+    overflow: auto;
+  }
+
+  .modal-text {
+    flex-direction: column;
+  }
+  .modal-card {
+    flex-direction: column;
+  }
+
+  .books-page__heading{
+    text-align: center;
+  }
+
+  .book-page__allbooks{
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  }
+}

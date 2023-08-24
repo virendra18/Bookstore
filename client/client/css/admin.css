@@ -1,0 +1,206 @@
+.admin-page {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.admin-page__heading {
+  font-size: 4rem;
+  /* color: #ee2b69; */
+  color: var(--clr-main);
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.btn__add {
+  /* background: #ee2b69; */
+  background: var(--clr-main);
+  color: white;
+  text-align: center;
+  padding: 0.8rem 2rem;
+
+  border-radius: 9999px;
+  /* border-radius: 10px; */
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+#allbooks {
+  margin-top: 5rem;
+  display: flex;
+  gap: 5rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.m-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.btn__knowmore {
+  background: transparent;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  cursor: pointer;
+  /* color: #333; */
+}
+
+.btn__delete {
+  background: #eb4034;
+  color: white;
+  margin-top: 2rem;
+  text-align: center;
+  /* padding: 0.8rem 2rem; */
+  padding: 1rem 1.6rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.btn__edit {
+  /* background-color: #ee2b69; */
+  background-color: var(--clr-main);
+
+  color: white;
+  margin-top: 2rem;
+  text-align: center;
+  /* padding: 0.8rem 2rem; */
+  padding:1rem 1.6rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.admin__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  /* position: relative; */
+}
+
+/* admin modal */
+
+.edit-close-modal {
+  position: absolute;
+  top: 0rem;
+  right: 2rem;
+  font-size: 3.5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+.edit-modal {
+  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  overflow: auto;
+  /* margin: 100px 0; */
+
+  height: 90%;
+  overflow-y: auto !important;
+}
+
+.edit-overlay {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+/* modal content */
+
+.edit-modal-body {
+  /* border: #ee2b69 */
+  /* border: solid #ee2b69 0.4rem; */
+  border: solid var(--clr-main) 0.4rem;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  min-height: 200px;
+
+  width: 80%;
+  margin: 0 auto;
+}
+
+.modal-card {
+  display: flex;
+  /* min-height: 20vh; */
+  /* gap: 5rem; */
+  gap: 2rem;
+  width: 100%;
+
+  align-items: center;
+}
+
+.modalbookImage {
+  height: 40vh;
+  border-radius: 0.5rem;
+}
+
+/* .modal-book-description */
+
+.modal-book-heading {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.modal-book-info p {
+  font-size: 1.2rem;
+}
+
+.modal-text-group {
+  display: flex;
+  /* gap: 0.5rem; */
+
+  align-items: baseline;
+  flex-direction: column;
+}
+.modal-text {
+  display: flex;
+  gap: 0.5rem;
+
+  align-items: baseline;
+}
+
+.modal-text-group::after {
+  content: "";
+  display: flex;
+  border-bottom: 2px solid rgba(51, 51, 51, 0.2);
+  width: 100%;
+  margin: 0.3rem 0;
+}
+
+.modal-text-group:nth-child(4)::after {
+  display: none;
+}
